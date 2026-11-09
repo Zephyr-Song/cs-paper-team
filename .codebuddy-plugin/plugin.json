@@ -1,0 +1,117 @@
+{
+  "name": "cs-paper-team",
+  "version": "1.0.0",
+  "description": "A multi-agent team that reads computer-science papers collaboratively: a lead editor plus four specialists covering method/mechanism, experiment evidence, reproducibility, and literature positioning, producing a credibility-graded structured report.",
+  "author": {
+    "name": "Zephyr Song",
+    "email": "2321286740@qq.com"
+  },
+  "homepage": {
+    "url": "https://github.com/Zephyr-Song/cs-paper-team",
+    "type": "github"
+  },
+  "license": "MIT",
+  "keywords": [
+    "paper-reading",
+    "cs-papers",
+    "peer-review",
+    "reproducibility",
+    "collaborative-team"
+  ],
+  "agents": [
+    "./agents/cs-paper-team-team-lead.md",
+    "./agents/method-analyst.md",
+    "./agents/evidence-auditor.md",
+    "./agents/repro-engineer.md",
+    "./agents/lit-surveyor.md"
+  ],
+  "skills": ["./skills/cs-paper-reading"],
+
+  "expertType": "team",
+  "agentName": "cs-paper-team-team-lead",
+
+  "displayName": {
+    "en": "CS Paper Reading Team",
+    "zh": "CS 论文解读团"
+  },
+  "profession": {
+    "en": "CS Paper Reading Team",
+    "zh": "CS 论文解读团"
+  },
+  "displayDescription": {
+    "en": "A lead editor plus four specialists collaboratively read CS papers across method, experiment evidence, reproducibility and literature positioning, and grade the conclusion's credibility.",
+    "zh": "由主理人与四位专家分工，从方法机理、实验证据、系统复现、领域文献四维度精读 CS 论文并评估可信度"
+  },
+  "avatar": "avatars/team.png",
+  "categoryId": "02-Engineering",
+  "defaultInitPrompt": {
+    "zh": "帮我用专家团精读这篇 CS 论文（附 PDF / 链接 / arXiv ID），四人分工出完整解读与可信度评估",
+    "en": "Use the team to read this CS paper closely for me (PDF / link / arXiv ID); split the work across four specialists and give a full reading with a credibility grade"
+  },
+  "plugin": "cs-paper-team",
+  "tags": [
+    { "en": "CS Papers", "zh": "计算机论文" },
+    { "en": "Collaborative Reading", "zh": "分工协作解读" },
+    { "en": "Credibility Audit", "zh": "可信度评估" }
+  ],
+  "quickPrompts": [
+    {
+      "en": "Use the team to read this CS paper closely for me (PDF / link / arXiv ID); split the work across four specialists and give a full reading with a credibility grade",
+      "zh": "帮我用专家团精读这篇 CS 论文（附 PDF / 链接 / arXiv ID），四人分工出完整解读与可信度评估"
+    },
+    {
+      "en": "Is the method actually novel and do the experiments really support the claims? Dissect it from the method and evidence angles.",
+      "zh": "这篇论文的方法到底新在哪？实验是否真支撑结论？从方法和证据两路帮我拆解"
+    },
+    {
+      "en": "Can this be reproduced, and which prior works is it really related to? Give me a replication path and literature positioning.",
+      "zh": "这篇能复现吗？它和哪几篇工作真正相关？给我复现路径和文献定位"
+    }
+  ],
+  "teamInfo": {
+    "leadAgent": "cs-paper-team-team-lead",
+    "memberAgents": [
+      "method-analyst",
+      "evidence-auditor",
+      "repro-engineer",
+      "lit-surveyor"
+    ]
+  },
+  "members": [
+    {
+      "id": "cs-paper-team-team-lead",
+      "displayName": { "en": "Lun Heng", "zh": "论衡" },
+      "profession": { "en": "CS Paper Reading Lead", "zh": "CS 论文解读总编" },
+      "avatar": "avatars/cs-paper-team-lead.png",
+      "role": "lead"
+    },
+    {
+      "id": "method-analyst",
+      "displayName": { "en": "Shen Xigou", "zh": "沈析构" },
+      "profession": { "en": "Method & Mechanism Analyst", "zh": "方法机理拆解专家" },
+      "avatar": "avatars/method-analyst.png",
+      "role": "member"
+    },
+    {
+      "id": "evidence-auditor",
+      "displayName": { "en": "Yan Zhenghong", "zh": "严证衡" },
+      "profession": { "en": "Experiment Evidence Auditor", "zh": "实验证据审计专家" },
+      "avatar": "avatars/evidence-auditor.png",
+      "role": "member"
+    },
+    {
+      "id": "repro-engineer",
+      "displayName": { "en": "Cheng Fuxian", "zh": "程复现" },
+      "profession": { "en": "Reproducibility Engineer", "zh": "系统复现评估专家" },
+      "avatar": "avatars/repro-engineer.png",
+      "role": "member"
+    },
+    {
+      "id": "lit-surveyor",
+      "displayName": { "en": "Wen Suyuan", "zh": "文溯源" },
+      "profession": { "en": "Literature & Positioning Surveyor", "zh": "领域文献定位专家" },
+      "avatar": "avatars/lit-surveyor.png",
+      "role": "member"
+    }
+  ]
+}
